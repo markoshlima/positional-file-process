@@ -1,4 +1,4 @@
-# ** Introduction **
+# **Introduction**
 
 This project is based for legacy applications that works with positional files to process data.
 The objetive is read these positional files when they arrives in AWS S3, and then send to a dataware-house like AWS Redshift, and finally read the results with a Business Intelligence tool as AWS QuickSight.
@@ -6,7 +6,7 @@ It's a simple flow, but very rich and usefull for these kind of application.
 
 To simulate this scenario, it is using Soccer Brazilian Championship. The files in folder **'/data'** contains three positional files that can be read and loaded into Redshift throught AWS Glue.
 
-# ** Positions **
+# **Positions**
 
 Below is showed the contract positions about the file.
 
@@ -44,7 +44,7 @@ Below is showed the contract positions about the file.
 |chutes fora visitante|172|173|2|
 
 
-# ** Application Architecture **
+# **Application Architecture**
 
 ![alt text](https://github.com/markoshlima/positional-file-process/blob/main/docs/Architecture%20Application.png?raw=true)
 
@@ -54,6 +54,6 @@ Below is showed the contract positions about the file.
 - After transformation, the DataFrame will be saved into Redshift.
 - At the end of process, the user can read the results from QuickSight
 
-# **Pricing **
+# **Pricing**
 
 // calculating ...
