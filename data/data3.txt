@@ -1,0 +1,20 @@
+2008202012154Estádio Jornalista Mário Filho          Rafael Traci                  Flamengo     Grêmio       Domènec TorrentRenato Gaúcho  120801010102172019160101010308100405
+2008202012154Estádio Nabi Abi Chedid                 Jean Pierre Goncalves Lima    RB BragantinoFluminense   Felipe Tigrão  Odair Hellmann 141002010604191414180301020013090603
+2008202012304Arena da Baixada                        Caio Max Augusto Vieira       Athletico-PR Palmeiras    Dorival Júnior Luxemburgo     061300010507201918190200000206100506
+2008202001304Estádio Beira-Rio                       Wagner Reway                  InternacionalAtlético-GO  Eduardo Coudet Vágner Mancini 050703000403191716160102010211070305
+2008202001304Estádio Serra Dourada                   Dyorgines Jose Padovani       Goiás EC     Fortaleza    Ney Franco     Rogério Ceni   191801030206161514140003030213130905
+2008202002304Estádio Olímpico Nilton Santos          Flavio Rodrigues de Souza     Botafogo     Atlético-MG  Paulo Autuori  Jorge Sampaoli 160102010716091010060803010210310313
+2008202002304Neo Química Arena                       Braulio da Silva Machado      Corinthians  Coritiba FC  Tiago Nunes    Eduardo Barroca152003011000150706150309000323090603
+2108202012154Estádio Adelmar da Costa Carvalho       Jose Mendonça                 Sport Recife Santos FC    Daniel PaulistaCuca           110900010405231717220405010111160310
+2108202001004Estádio Cícero Pompeu de Toledo         Rodrigo Carvalhaes de Miranda São Paulo    EC Bahia     Fernando Diniz Roger Machado  040201010506141616140304040124081202
+2108202001004Estádio Governador Plácido Castelo      Thiago Duarte Peixoto         Ceará SC     Vasco da GamaGuto Ferreira  Ramon Menezes  170300031302181413180102010222050900
+2208202009005Arena da Baixada                        Daniel Nobre Bins             Athletico-PR Fluminense   Dorival Júnior Odair Hellmann 071400010702211211210205010214090603
+2308202012005Estádio Beira-Rio                       Luiz Flávio de Oliveira       InternacionalAtlético-MG  Eduardo Coudet Jorge Sampaoli 030401000205202120190002030106110105
+2308202002005Estádio Olímpico Pedro Ludovico TeixeiraWilton Sampaio                Goiás EC     Atlético-GO  Glauber Ramos  Vágner Mancini 181302000000000000000000000000000000
+2308202004005Estádio Jornalista Mário Filho          Leandro Pedro Vuaden          Flamengo     Botafogo     Domènec TorrentPaulo Autuori  171201010504151716140004000215070504
+2308202009005Estádio São Januário                    Savio Pereira Sampaio         Vasco da GamaGrêmio       Ramon Menezes  Renato Gaúcho  010900000604231717230403010010140605
+2308202009005Estádio Cícero Pompeu de Toledo         Vinicius Gonçalves Dias AraujoPalmeiras    Santos FC    Luxemburgo     Cuca           080602010506211413190203040017090604
+2308202009005Estádio Nabi Abi Chedid                 Gilberto Rodrigues Junior     RB BragantinoCoritiba FC  Felipe Tigrão  Mozart         112001021003171818140201010215070501
+2408202012005Estádio Adelmar da Costa Carvalho       Rodrigo D                     Sport Recife São Paulo    Daniel PaulistaFernando Diniz 160500100000000000000000000000000000
+2408202001005Estádio Governador Plácido Castelo      Wagner do Nascimento MagalhãesCeará SC     EC Bahia     Guto Ferreira  Roger Machado  190202000611210707180702010111160507
+2708202002305Neo Química Arena                       Rodolpho Toski Marques        Corinthians  Fortaleza    Tiago Nunes    Rogério Ceni   101501010501141211130206000521101007
