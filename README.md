@@ -25,7 +25,7 @@ Below is showed the contract positions about the file.
 |técnico mandante|110|124|15|
 |técnico visitante|125|139|15|
 |colocação mandante|140|141|2|
-|coloação visitante|142|143|2|
+|colocação visitante|142|143|2|
 |gols mandante|144|144|1|
 |gols visitante|145|145|1|
 |escanteios mandante|146|147|2|
@@ -33,7 +33,7 @@ Below is showed the contract positions about the file.
 |faltas mandante|150|151|2|
 |faltas visitante|152|153|2|
 |chutes bola parada mandante|154|155|2|
-|chutes bola parada visitante|156|157|1|
+|chutes bola parada visitante|156|157|2|
 |defesas mandante|158|159|2|
 |defesas visitante|160|161|2|
 |impedimentos mandante|162|163|2|

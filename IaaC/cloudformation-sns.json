@@ -1,0 +1,17 @@
+{
+	"AWSTemplateFormatVersion" : "2010-09-09",
+
+	"Description" : "Create SNS Topic",
+
+	"Resources" : {
+
+		"TopicSoccerTriggerGlueError" : {
+		  "Type" : "AWS::SNS::Topic",
+		  "Properties" : {
+		      "DisplayName" : "Topic Soccer Trigger Glue Error",
+		      "FifoTopic" : false,
+		      "TopicName" : "topic-soccer-trigger-glue-error"
+		    }
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"AWSTemplateFormatVersion" : "2010-09-09",
+
+	"Description" : "Create SQS queues and DLQ queues",
+
+	"Resources" : {
+
+		"TriggerGlueDLQ" : {
+		  "Type" : "AWS::SQS::Queue",
+		  "Properties" : {
+			  "QueueName" : "trigger-glue-dlq",
+			  "MessageRetentionPeriod":1209600 
+			}
+		},
+		"SoccerQueue" : {
+		  "Type" : "AWS::SQS::Queue",
+		  "Properties" : {
+			  "QueueName" : "soccer-queue"
+			}
+		},
+		"SoccerQueueDlq" : {
+		  "Type" : "AWS::SQS::Queue",
+		  "Properties" : {
+			  "QueueName" : "soccer-queue-dlq"
+			  "MessageRetentionPeriod":1209600
+			}
+		}
+	}
+}

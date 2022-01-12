@@ -1,0 +1,23 @@
+{
+	"AWSTemplateFormatVersion" : "2010-09-09",
+
+	"Description" : "S3 Buckets",
+
+	"Resources" : {
+
+		"SoccerFilesPositional" : {
+			  "Type" : "AWS::S3::Bucket",
+			  "Properties" : {
+			      "BucketName" : "soccerfiles-positional",
+			    }
+			}
+		},
+		"SoccerFilesPositional" : {
+			  "Type" : "AWS::S3::Bucket",
+			  "Properties" : {
+			      "BucketName" : "soccerfiles-formated",
+			    }
+			}
+		}
+	}
+}
