@@ -21,6 +21,7 @@ sqlContext = SQLContext(spark.sparkContext, spark)
 colDefaultName = '_1'
 queue_url = '' #URL SQS queue
 arquivo = args['file']
+bucketFormated = 'soccerfiles-formated'
 
 #leitura do arquivo
 print("Lendo arquivo: ", arquivo)
@@ -43,12 +44,12 @@ rodadas = dfPos.withColumn('dia', col(colDefaultName).substr(1,2))\
           .withColumn('hora', col(colDefaultName).substr(9,2))\
           .withColumn('minuto', col(colDefaultName).substr(11,2))\
           .withColumn('rodada', col(colDefaultName).substr(13,1))\
-          .withColumn('estadio', col(colDefaultName).substr(14,40))\
-          .withColumn('arbitro', col(colDefaultName).substr(54,30))\
-          .withColumn('time_mandante', col(colDefaultName).substr(84,13))\
-          .withColumn('time_visitante', col(colDefaultName).substr(97,13))\
-          .withColumn('tecnico_mandante', col(colDefaultName).substr(110,15))\
-          .withColumn('tecnico_visitate', col(colDefaultName).substr(125,15))\
+          .withColumn('estadio_nome', col(colDefaultName).substr(14,40))\
+          .withColumn('arbitro_nome', col(colDefaultName).substr(54,30))\
+          .withColumn('time_mandante_nome', col(colDefaultName).substr(84,13))\
+          .withColumn('time_visitante_nome', col(colDefaultName).substr(97,13))\
+          .withColumn('tecnico_mandante_nome', col(colDefaultName).substr(110,15))\
+          .withColumn('tecnico_visitate_nome', col(colDefaultName).substr(125,15))\
           .withColumn('colocacao_mandante', col(colDefaultName).substr(140,2))\
           .withColumn('colocacao_visitante', col(colDefaultName).substr(142,2))\
           .withColumn('gols_mandante', col(colDefaultName).substr(144,1))\
@@ -73,7 +74,7 @@ print("Criando tabela do dataframe")
 rodadas.createOrReplaceTempView('rodadas')
 
 #adiciona uuid
-rodadas = sqlContext.sql('SELECT r.*, TRIM(estadio) as testadio, TRIM(arbitro) as tarbitro, TRIM(time_mandante) as ttime_mandante, TRIM(time_visitante) as ttime_visitante, TRIM(tecnico_mandante) as ttecnico_mandante, TRIM(tecnico_visitate) as ttecnico_visitate, uuid() as rodada_id FROM rodadas r')
+rodadas = sqlContext.sql('SELECT r.*, TRIM(estadio_nome) as estadio, TRIM(arbitro_nome) as arbitro, TRIM(time_mandante_nome) as time_mandante, TRIM(time_visitante_nome) as time_visitante, TRIM(tecnico_mandante_nome) as tecnico_mandante, TRIM(tecnico_visitate_nome) as tecnico_visitate, uuid() as rodada_id FROM rodadas r')
 
 #remove colunas desnecessarias
 print("Removendo colunas desnecessarias")
@@ -108,6 +109,6 @@ print("Total de itens enviados: ", total)
 #salva DF no S3 formato parquet
 print("Enviando dataframe desnormalizado para S3 no formato PARQUET ", total)
 idFileName = uuid.uuid4() 
-rodadas.write.parquet("s3://soccerfiles-formated/"+str(idFileName)+".parquet",mode="overwrite")
+rodadas.write.parquet("s3://"+bucketFormated+"/"+str(idFileName)+".parquet",mode="overwrite")
 
 job.commit()
