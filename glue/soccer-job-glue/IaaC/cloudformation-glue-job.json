@@ -1,0 +1,31 @@
+{
+	"AWSTemplateFormatVersion" : "2010-09-09",
+
+	"Description" : "AWS Glue JOB",
+
+	"Resources" : {
+		"SoccerGlueScript" : {
+			"Type" : "AWS::S3::Bucket",
+			"Properties" : {
+				"BucketName" : "soccer-glue-script"
+			  }
+		},
+		"SoccerGlueJob" : {
+			"Type" : "AWS::Glue::Job",
+			"Properties" : {
+				"Command" : {
+					"Name" : "soccer-script",
+					"PythonVersion" : "3",
+					"ScriptLocation" : "s3://soccer-glue-script//SoccerJob"
+				},
+				"Description" : "Soccer Glue Job",
+				"GlueVersion" : "3.0",
+				"Name" : "SoccerJob",
+				"NumberOfWorkers" : 2,
+				"Timeout" : 10,
+				"WorkerType" : "Standard "
+			}  
+		}
+
+	}
+}
