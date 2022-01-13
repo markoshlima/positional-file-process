@@ -21,7 +21,7 @@
 		"SoccerQueueDlq" : {
 		  "Type" : "AWS::SQS::Queue",
 		  "Properties" : {
-			  "QueueName" : "soccer-queue-dlq"
+			  "QueueName" : "soccer-queue-dlq",
 			  "MessageRetentionPeriod":1209600
 			}
 		}

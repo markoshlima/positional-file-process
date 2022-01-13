@@ -6,6 +6,43 @@ It's a simple flow, but very rich and usefull for these kind of application.
 
 To simulate this scenario, it is using Soccer Brazilian Championship. The files in folder **'/data'** contains three positional files that can be read and loaded into Redshift throught AWS Glue.
 
+The files contains positional data like this:
+`2708202002305Neo Química Arena                       Rodolpho Toski Marques        Corinthians  Fortaleza    Tiago Nunes    Rogério Ceni   101501010501141211130206000521101007`
+
+And the target is the folowing:
+`{
+   "dia":"27",
+   "mes":"08",
+   "ano":"2020",
+   "hora":"02",
+   "minuto":"30",
+   "rodada":"5",
+   "colocacao_mandante":"10",
+   "colocacao_visitante":"15",
+   "gols_mandante":"0",
+   "gols_visitante":"1",
+   "escanteios_mandante":"01",
+   "escanteios_visitante":"05",
+   "faltas_mandante":"01",
+   "faltas_visitante":"14",
+   "chutes_bola_parada_mandante":"12",
+   "chutes_bola_parada_visitante":"11",
+   "desefas_mandante":"13",
+   "desefas_visitante":"02",
+   "impedimentos_mandante":"06",
+   "impedimentos_visitante":"00",
+   "chutes_mandante":"05",
+   "chutes_visitante":"21",
+   "chutes_fora_mandante":"10",
+   "chutes_fora_visitate":"10",
+   "estadio":"Neo Química Arena",
+   "arbitro":"Rodolpho Toski Marques",
+   "time_mandante":"Corinthians",
+   "time_visitante":"Fortaleza",
+   "tecnico_mandante":"Tiago Nunes",
+   "tecnico_visitate":"Rogério Ceni"
+}`
+
 # **Positions**
 
 Below is showed the contract positions about the file.
@@ -49,11 +86,17 @@ Below is showed the contract positions about the file.
 ![alt text](https://github.com/markoshlima/positional-file-process/blob/main/docs/Architecture%20Application.png?raw=true)
 
 - The files can be uploaded into S3
-- S3 triggers a Lambda Function that will copy this file to another repository and starts a Glue Job
+- S3 triggers a Lambda Function that will starts a Glue Job
 - The Glue Job will read this file and process with PySpark to do the ETL Job.
-- After transformation, the DataFrame will be saved into Redshift.
-- At the end of process, the user can read the results from QuickSight
+- After transformation, the DataFrame will be streamed into a SQS queue.
+- SQS will trigger a lambda funtion to do transational operations about each line/event like data normalization
+- Lambda will save these normalized data into Redshift
+- The data from Redshift could be readen from QuickSight 
+- The data from S3 could be readen from Athena
+- Every trigger there is an exception flow
 
 # **Pricing**
 
-// calculating ...
+All resources were priced in AWS Calculator, the following link, the final price of this architecture, excluding Lambda, SQS, S3 and Cloudfront services, because it is Free Tier Elegible or the value is low to input in this pricing cotation.
+
+[Click here for Pricing Project](https://calculator.aws/#/estimate?id=dc53791ea447d28af96eceef95d5e8c49fa47673)
