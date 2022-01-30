@@ -49,7 +49,7 @@ rodadas = dfPos.withColumn('dia', col(colDefaultName).substr(1,2))\
           .withColumn('time_mandante_nome', col(colDefaultName).substr(84,13))\
           .withColumn('time_visitante_nome', col(colDefaultName).substr(97,13))\
           .withColumn('tecnico_mandante_nome', col(colDefaultName).substr(110,15))\
-          .withColumn('tecnico_visitate_nome', col(colDefaultName).substr(125,15))\
+          .withColumn('tecnico_visitante_nome', col(colDefaultName).substr(125,15))\
           .withColumn('colocacao_mandante', col(colDefaultName).substr(140,2))\
           .withColumn('colocacao_visitante', col(colDefaultName).substr(142,2))\
           .withColumn('gols_mandante', col(colDefaultName).substr(144,1))\
