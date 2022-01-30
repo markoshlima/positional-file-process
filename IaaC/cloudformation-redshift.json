@@ -1,0 +1,19 @@
+{
+	"AWSTemplateFormatVersion" : "2010-09-09",
+
+	"Description" : "Create Redshift Cluster",
+
+	"Resources" : {
+
+		"RedshiftCluster" : {
+		  "Type" : "AWS::Redshift::Cluster",
+		  "Properties" : {
+			"DBName": "soccer-games-db", 
+			"MasterUsername": "master",
+			"MasterUserPassword": { "Ref" : "MasterUserPassword" },
+			"NodeType": "ds2.xlarge",
+			"ClusterType": "single-node" 
+			}
+		}
+	}
+}
