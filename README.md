@@ -95,8 +95,33 @@ Below is showed the contract positions about the file.
 - The data from S3 could be readen from Athena
 - Every trigger there is an exception flow
 
+# Quicksight Results
+
+After all process has been executed with sucess, we could see the results inside Redshift. In this example was created some graphs and reports about the Brasileirão, and it will changing according new files been processed. Here it was listed:
+- The current game round
+- Total rounds
+- More gols kicks
+- More gols about all teams
+- The coach that his team had done more fouls.
+- The referee who whistled more games
+
+![alt text](https://github.com/markoshlima/positional-file-process/blob/main/docs/quicksight1.JPG?raw=true)
+
+![alt text](https://github.com/markoshlima/positional-file-process/blob/main/docs/quicksight2.JPG?raw=true)
+
+![alt text](https://github.com/markoshlima/positional-file-process/blob/main/docs/quicksight3.JPG?raw=true)
+
 # **Pricing**
 
 All resources were priced in AWS Calculator, the following link, the final price of this architecture, excluding Lambda, SQS, S3 and Cloudfront services, because it is Free Tier Elegible or the value is low to input in this pricing cotation.
 
 [Click here for Pricing Project](https://calculator.aws/#/estimate?id=dc53791ea447d28af96eceef95d5e8c49fa47673)
+
+# Addition Information & Setup
+
+The project is for lab and studies, it is not operating so as not to keep costs in production. That's a reason not existing a Continuos Develivy implemented too.
+
+To setup the environment:
+  - Use folder /Iaac in this repository (Infraestructure as a Code) to publish the S3 buckets, SNS, Redshift and also SQS queues in AWS CloudFormation.
+  - In Lambda functions there is the SAM Template for creating (CloudFormation) the backend applications as well. 
+  - In folder `/sql` there are two scripts: `DDL - RedShift Tables.sq` that is DDL for redshift tables and `Quicksight Custom Query.sql` that is the custom query used in Quicksight to explore some graphs.
