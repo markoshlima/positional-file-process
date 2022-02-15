@@ -1,3 +1,9 @@
 [submodule "triggers/trigger-normalizer"]
 	path = triggers/trigger-normalizer
 	url = https://github.com/markoshlima/trigger-normalizer
+[submodule "glue/soccer-job-glue"]
+	path = glue/soccer-job-glue
+	url = https://github.com/markoshlima/soccer-job-glue
+[submodule "triggers/trigger-glue-soccer-job"]
+	path = triggers/trigger-glue-soccer-job
+	url = https://github.com/markoshlima/trigger-glue-soccer-job
