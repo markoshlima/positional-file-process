@@ -1,1 +1,0 @@
-# trigger-glue-soccer-job
