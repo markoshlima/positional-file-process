@@ -1,0 +1,3 @@
+[submodule "triggers/trigger-normalizer"]
+	path = triggers/trigger-normalizer
+	url = https://github.com/markoshlima/trigger-normalizer
